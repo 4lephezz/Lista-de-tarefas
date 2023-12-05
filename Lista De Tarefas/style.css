@@ -1,0 +1,60 @@
+body {
+
+    background-image: url(Design\ sem\ nome\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 845px;
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Calistoga', serif;
+}
+#listaDeTarefas {
+    color: rgb(255, 255, 255);
+}
+
+button {
+    color: rgb(173, 0, 0);
+    padding: 10px;
+    box-shadow: rgba(44, 44, 44, 0.4) 5px 5px, rgba(51, 0, 80, 0.3) 10px 10px;
+    
+}
+
+input {
+    color: black;
+    padding: 10px;
+    box-shadow: rgba(44, 44, 44, 0.4) 5px 5px, rgba(51, 0, 80, 0.3) 10px 10px;
+
+}
+
+
+main {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blueviolet;
+    padding: 150px 10px;
+    border-radius: 20px 0%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px;
+}
+.item {
+    background-color: rgb(35, 5, 63);
+    color: white;
+    
+}
+
+.butao {
+    background-color: rgb(35, 5, 63);
+    color: white;
+
+}
+.list{
+font-size: 20px;
+
+
+}

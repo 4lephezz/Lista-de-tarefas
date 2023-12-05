@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local</title>
+    <style>
+        .modal-bg {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed; 
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal {
+            background-color: white;
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="welcome"></h1>
+    <button onclick="openModal()">Exibir dados</button>
+
+    <div class="modal-bg" id="modal-bg">
+        <div class="modal">
+            
+        </div>
+    </div>
+
+    <script>
+        var nome = localStorage.getItem("nome");
+        if (nome == null) {
+            nome = prompt("Qual seu Nome?");
+            localStorage.setItem("nome", nome);
+        }
+
+        var cpf = localStorage.getItem("cpf");
+        if (cpf == null) {
+            cpf = prompt("Qual seu CPF?");
+            localStorage.setItem("cpf", cpf);
+        }
+
+        var welcome = document.getElementById("welcome");
+        welcome.innerText = "Seja bem-vindo, " + nome;
+
+        var modalBg = document.getElementById("modal-bg");
+        var modal = document.querySelector(".modal");
+
+        function openModal() {
+            modalBg.style.display = "flex"; 
+            modal.innerHTML = "Nome: " + nome + "<br>CPF: " + cpf;
+        }
+
+        function closeModal() {
+            modalBg.style.display = "none";
+        }
+
+        document.addEventListener("click", (event) => {
+            if (event.target.id === "modal-bg") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>
